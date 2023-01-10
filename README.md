@@ -10,10 +10,12 @@ git submodule update
 cd ..
 bash gsim/install.sh
 
-python common/grid_utilities_setup.py build
-python common/grid_utilities_setup.py install
-
+cd common
+python grid_utilities_setup.py build
+python grid_utilities_setup.py install
+cd ..
 ```
+You may need to install a compiler and some Python packages.
 
 To run the simulations, type
 
@@ -22,8 +24,6 @@ python run_experiment.py M
 ```
 
 where M is 1003 for Fig. 3, 1004 for Fig. 4, etc. 
-
-You may need to install some Python packages. 
 
 The code of the experiments can be found in experiments/jpaper_experiments.py. 
 
