@@ -66,9 +66,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         exp_num = "1003"
         save_exp_at = "output/exp_" + exp_num + "/"
         if not os.path.exists("output/tempt/"):
-            os.mkdir("output/tempt/")
+            os.makedirs("output/tempt/")
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         l_min_user_rates = np.array([20.]) * 1e6
         l_max_uav_total_rates = np.array([99.]) * 1e6
@@ -177,9 +177,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         exp_num = "1004"
         save_exp_at = "output/exp_" + exp_num + "/"
         if not os.path.exists("output/tempt/"):
-            os.mkdir("output/tempt/")
+            os.makedirs("output/tempt/")
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         l_min_user_rates = np.array([10., 15, 20, 25, 30, 35, 40, 45]) * 1e6
         l_max_uav_total_rates = np.array([100.]) * 1e6
@@ -288,9 +288,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         exp_num = "1005"
         save_exp_at = "output/exp_" + exp_num + "/"
         if not os.path.exists("output/tempt/"):
-            os.mkdir("output/tempt/")
+            os.makedirs("output/tempt/")
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         l_min_user_rates = np.array([20.]) * 1e6
         l_max_uav_total_rates = np.array([39., 49, 59, 69, 79, 89, 99]) * 1e6
@@ -432,9 +432,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
             b_admm_decrease_err_tol = True
 
             if not os.path.exists("output/tempt/"):
-                os.mkdir("output/tempt/")
+                os.makedirs("output/tempt/")
             if not os.path.exists(save_exp_at):
-                os.mkdir(save_exp_at)
+                os.makedirs(save_exp_at)
 
             pl_gs = GroupSparseUAVPlacer(
                 sparsity_tol=1e-2,
@@ -517,7 +517,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         exp_num = "1007"
         save_exp_at = "output/exp_" + exp_num + "/"
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         l_min_user_rates = np.array([20]) * 1e6
         l_max_uav_total_rates = np.array([74]) * 1e6
@@ -656,7 +656,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
 
                     # simulation code
                     if not os.path.exists(save_exp_at):
-                        os.mkdir(save_exp_at)
+                        os.makedirs(save_exp_at)
 
                     pl_gs = GroupSparseUAVPlacer(
                         sparsity_tol=1e-2,
@@ -767,7 +767,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
 
                     # simulation code
                     if not os.path.exists(save_exp_at):
-                        os.mkdir(save_exp_at)
+                        os.makedirs(save_exp_at)
 
                     pl_gs = GroupSparseUAVPlacer(
                         sparsity_tol=1e-2,
@@ -939,7 +939,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
 
                     # simulation code
                     if not os.path.exists(save_exp_at):
-                        os.mkdir(save_exp_at)
+                        os.makedirs(save_exp_at)
 
                     pl_gs = GroupSparseUAVPlacer(
                         sparsity_tol=1e-2,
@@ -1011,9 +1011,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         exp_num = "1011"
         save_exp_at = "output/exp_" + exp_num + "/"
         if not os.path.exists("output/tempt/"):
-            os.mkdir("output/tempt/")
+            os.makedirs("output/tempt/")
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         l_min_user_rates = np.array([5, 7, 9, 11, 13, 15, 17]) * 1e6
         l_max_uav_total_rates = np.array([40, 60, 80, 100]) * 1e6
@@ -1178,9 +1178,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         b_save_results = True
 
         if not os.path.exists("output/tempt/"):
-            os.mkdir("output/tempt/")
+            os.makedirs("output/tempt/")
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         for min_fly_height in l_min_fly_height:
             exp_type = str(int(min_fly_height)) + "_minFlyHeight"
@@ -1284,9 +1284,9 @@ class ExperimentSet(gsim.AbstractExperimentSet):
         b_admm_decrease_err_tol = True
 
         if not os.path.exists("output/tempt/"):
-            os.mkdir("output/tempt/")
+            os.makedirs("output/tempt/")
         if not os.path.exists(save_exp_at):
-            os.mkdir(save_exp_at)
+            os.makedirs(save_exp_at)
 
         for building_height in l_building_height:
 
