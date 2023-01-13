@@ -6,10 +6,6 @@ import time
 import numpy as np
 from IPython.core.debugger import set_trace
 
-
-#
-
-
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 try:
@@ -93,7 +89,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
                     env = GridBasedBlockUrbanEnvironment(
                         area_len=[500, 400, 150],
                         num_pts_slf_grid=[50, 40, 15],
-                        num_pts_fly_grid=[9, 9, 9],
+                        num_pts_fly_grid=[9, 9, 5],
                         min_fly_height=50,
                         building_absorption=1)
 
