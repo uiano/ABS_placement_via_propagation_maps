@@ -200,7 +200,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
                     env = GridBasedBlockUrbanEnvironment(
                         area_len=[500, 400, 150],
                         num_pts_slf_grid=[50, 40, 15],
-                        num_pts_fly_grid=[9, 9, 9],
+                        num_pts_fly_grid=[9, 9, 5],
                         min_fly_height=50,
                         building_absorption=1)
 
@@ -311,7 +311,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
                     env = GridBasedBlockUrbanEnvironment(
                         area_len=[500, 400, 150],
                         num_pts_slf_grid=[50, 40, 15],
-                        num_pts_fly_grid=[9, 9, 9],
+                        num_pts_fly_grid=[9, 9, 5],
                         min_fly_height=50,
                         building_absorption=1)
 
@@ -442,7 +442,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
                 min_user_rate=min_user_rate,
                 max_uav_total_rate=max_uav_total_rate,
                 backend="admm",
-                reweighting_num_iter=50,
+                reweighting_num_iter=100,
                 admm_stepsize=1e-7,
                 admm_max_num_iter=70,
                 admm_initial_error_tol=5,
@@ -1203,7 +1203,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
                 min_user_rate=min_user_rate,
                 max_uav_total_rate=max_uav_total_rate,
                 backend="admm",
-                reweighting_num_iter=20,
+                reweighting_num_iter=100,
                 admm_stepsize=5e-8,
                 admm_max_num_iter=100,
                 admm_initial_error_tol=5,
@@ -1312,7 +1312,7 @@ class ExperimentSet(gsim.AbstractExperimentSet):
                 min_user_rate=min_user_rate,
                 max_uav_total_rate=max_uav_total_rate,
                 backend="admm",
-                reweighting_num_iter=50,
+                reweighting_num_iter=100,
                 admm_stepsize=5e-7,
                 admm_max_num_iter=70,
                 admm_initial_error_tol=5,
