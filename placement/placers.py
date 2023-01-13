@@ -422,6 +422,7 @@ class GroupSparseUAVPlacer(CapacityBasedPlacer):
                  sparsity_tol=1e-2,
                  backend="scipy",
                  admm_stepsize=1e-8,
+                 admm_stepsize_smallest=1e-9,
                  admm_max_num_iter=300,
                  admm_feasibility_tol=10,
                  admm_initial_error_tol=10,
@@ -446,6 +447,7 @@ class GroupSparseUAVPlacer(CapacityBasedPlacer):
         self.sparsity_tol = sparsity_tol
         self.backend = backend
         self.admm_stepsize = admm_stepsize
+        self.admm_stepsize_smallest = admm_stepsize_smallest
         self.admm_max_num_iter = admm_max_num_iter
         self.reweighting_noise = reweighting_noise
         self.reweighting_num_iter = reweighting_num_iter
@@ -980,8 +982,8 @@ class GroupSparseUAVPlacer(CapacityBasedPlacer):
         step_size = self.admm_stepsize / np.power(
             2, np.floor((reweighting_iter % 25) / 5))
 
-        if step_size < 1e-8:
-            step_size = 1e-8
+        if step_size < self.admm_stepsize_smallest:
+            step_size = self.admm_stepsize_smallest
 
         # if (reweighting_iter > 0) and (reweighting_iter % 25 == 0):
         #     step_size = 1e-3 * (10 * np.sin(np.random.rand()))
