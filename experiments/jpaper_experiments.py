@@ -59,6 +59,8 @@ import os
 
 class ExperimentSet(gsim.AbstractExperimentSet):
 
+    # num_mc_iter is currently set as 1 in all experiments. Higher num_mc_iter, e.g., hundreds, should be set to obtain the same figures as in the paper.
+    
     # Mean number of ABSs vs num_users
     def experiment_1003(l_args):
 
